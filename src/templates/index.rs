@@ -3,13 +3,17 @@ use sycamore::prelude::*;
 
 fn index_page<G: Html>(cx: Scope) -> View<G> {
     view! { cx,
-        // Don't worry, there are much better ways of styling in Perseus!
         div(style = "display: flex; flex-direction: column; justify-content: center; align-items: center; height: 95vh;") {
-            h1 { "Welcome to Perseus!" }
+            h1 { "Awesome folks 2023!" }
             p {
-                "This is just an example app. Try changing some code inside "
-                code { "src/templates/index.rs" }
-                " and you'll be able to see the results here!"
+                "Join me and a bunch of awesome folks I know for drinks!"
+            }
+            p {
+                "On "
+                strong { "August 12th" }
+                " at the "
+                a(href = "https://clerkenwellandsocial.com/#footer") { "Clernwell and Social" }
+                " from 6:00pm"
             }
         }
     }
@@ -18,7 +22,7 @@ fn index_page<G: Html>(cx: Scope) -> View<G> {
 #[engine_only_fn]
 fn head(cx: Scope) -> View<SsrNode> {
     view! { cx,
-        title { "Welcome to Perseus!" }
+        title { "Awesome 2023!" }
     }
 }
 
