@@ -4,7 +4,7 @@ use sycamore::prelude::*;
 fn index_page<G: Html>(cx: Scope) -> View<G> {
     view! { cx,
         div(style = "display: flex; flex-direction: column; justify-content: center; align-items: center; height: 95vh;") {
-            h1 { "Awesome folks 2023!" }
+            h1 { "Awesome '23!" }
             p {
                 "Join me and a bunch of awesome folks I know for drinks!"
             }
@@ -12,7 +12,7 @@ fn index_page<G: Html>(cx: Scope) -> View<G> {
                 "On "
                 strong { "August 12th" }
                 " at the "
-                a(href = "https://clerkenwellandsocial.com/#footer") { "Clernwell and Social" }
+                a(href = "https://clerkenwellandsocial.com/#footer") { "Clerkenwell and Social" }
                 " from 6:00pm"
             }
         }
@@ -22,7 +22,7 @@ fn index_page<G: Html>(cx: Scope) -> View<G> {
 #[engine_only_fn]
 fn head(cx: Scope) -> View<SsrNode> {
     view! { cx,
-        title { "Awesome 2023!" }
+        title { "Awesome '23!" }
     }
 }
 
